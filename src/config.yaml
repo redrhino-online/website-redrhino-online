@@ -1,7 +1,7 @@
 site:
   name: The RED Method
-  site: 'https://redrhino-online.github.io'
-  base: 'website-redrhino-online/'
+  site: 'https://redrhino-online.github.io/website-redrhino-online'
+  base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: XXXXXXXXXXXXXXXXXXXXXXXX
