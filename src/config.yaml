@@ -1,10 +1,10 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
-  base: '/'
+  name: The RED Method
+  site: 'https://redrhino-online.github.io'
+  base: 'website-redrhino-online/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: XXXXXXXXXXXXXXXXXXXXXXXX
 
 # Default SEO metadata
 metadata:
