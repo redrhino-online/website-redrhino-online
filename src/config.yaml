@@ -1,7 +1,7 @@
 site:
   name: The RED Method
   site: 'https://redrhino-online.github.io'
-  base: 'website-redrhino-online'
+  base: '/website-redrhino-online'
   trailingSlash: false
 
   googleSiteVerificationId: XXXXXXXXXXXXXXXXXXXXXXXX
@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: AstroWind
     images:
-      - url: 'assets/images/default.png'
+      - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
