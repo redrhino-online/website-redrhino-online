@@ -67,7 +67,9 @@ export default defineConfig({
     }),
 
     astrowind({
-      config: './src/config.yaml',
+      config: import.meta.env.MODE === 'development'
+        ? './src/config.local.yaml'
+        : './src/config.yaml'
     }),
   ],
 
