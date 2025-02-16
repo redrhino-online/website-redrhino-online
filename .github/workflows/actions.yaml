@@ -20,6 +20,11 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - run: npm ci
+      - run: npm run check
       - name: Install, build, and upload your site output
         uses: withastro/action@v2
         with:
