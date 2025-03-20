@@ -233,8 +233,11 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      You were likely inspired to visit this page after meeting our founder, Dave Mainville. Just follow up with "I'm
-      in!" to get started.
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;">Schedule My 9-Step Scaling Session</a>
+      <!-- Calendly link widget end -->
     </Fragment>
   </CallToAction>
 </Layout>
