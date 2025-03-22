@@ -42,12 +42,12 @@ const {
             <Fragment set:html={image} />
           ) : (
             <Image
-              class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+              class="inset-0 object-cover object-center h-full rounded-md shadow-lg md:absolute md:w-full bg-page"
               widths={[400, 768]}
               sizes="(max-width: 768px) 100vw, 432px"
-              width={432}
-              height={768}
-              layout="cover"
+              width={768}
+              height={432}
+              layout="contained"
               src={image?.src}
               alt={image?.alt || ''}
             />
