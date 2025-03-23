@@ -20,23 +20,22 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <!-- <Hero
+  <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
+        text: 'Get My RED Map',
+        href: '#session',
+        // target: '_blank',
         icon: 'tabler:download',
       },
       { text: 'Learn more', href: '#features' },
     ]}
     image={{
-      src: '~/assets/images/hero-image.png',
-      alt: 'AstroWind Hero Image',
+      src: '~/assets/images/map.png',
+      alt: 'The RED Method Map',
     }}
-  /> -->
-  <Hero actions={[{ text: 'Learn more', href: '#features' }]}>
+  >
     <Fragment slot="title">
       <span class="hidden xl:inline">Confidently</span> Enroll
       <span class="text-accent dark:text-white highlight"> New Clients</span>
@@ -45,7 +44,7 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">The RED Method</span> is a simple system for coaches to consistently enroll high-ticket
+        <span class="font-semibold">The RED Method</span> is a simple 3-step system for coaches to consistently enroll high-ticket
         clients</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">every week like clockwork</span>
@@ -227,19 +226,18 @@ const metadata = {
     ]}
   > -->
   <CallToAction>
-    <Fragment slot="title">
-      Get Started<br class="block sm:hidden" />
-      <span class="sm:whitespace-nowrap">with the RED Method</span>
-    </Fragment>
+    <Fragment slot="title">Get Started with the RED Method</Fragment>
 
     <Fragment slot="subtitle">
       <!-- Calendly link widget begin -->
       <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
       <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
       <a
+        id="session"
         href=""
+        class=""
         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;"
-        >Schedule My 9-Step Scaling Session</a
+        >[ Schedule My RED Map Session ]</a
       >
       <!-- Calendly link widget end -->
     </Fragment>
