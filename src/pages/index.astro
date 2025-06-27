@@ -10,7 +10,7 @@ import Content from '~/components/widgets/Content.astro';
 // import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 // import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 
 const metadata = {
   title: 'Get New Clients Every Week - The RED Method',
@@ -24,7 +24,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get My RED Map',
+        text: 'I Want More Clients!',
         href: '#session',
         // target: '_blank',
         icon: 'tabler:download',
@@ -44,11 +44,11 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">The RED Method</span> is a simple 3-step system for coaches to consistently enroll high-ticket
-        clients</span
+        <span class="font-semibold">The RED Method</span> is a simple 3-step system for businesses to consistently enroll
+        great clients</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">every week like clockwork</span>
-      without relying on referrals
+      without burning out.
     </Fragment>
   </Hero>
 
@@ -112,7 +112,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building A Real Foundation</h3>
-      By treating client acquisition like an engineered system, you get measurable, repeatable results."
+      By following a simple plan you get measurable, repeatable results.
     </Fragment>
 
     <Fragment slot="bg">
@@ -225,20 +225,42 @@ const metadata = {
       },
     ]}
   > -->
-  <CallToAction>
-    <Fragment slot="title">Get Started with the RED Method</Fragment>
-
-    <Fragment slot="subtitle">
-      <!-- Calendly link widget begin -->
-      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-      <a
-        href=""
-        class=""
-        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;"
-        >[ Schedule My RED Map Session ]</a
-      >
-      <!-- Calendly link widget end -->
-    </Fragment>
-  </CallToAction>
+  <Steps2
+    title="A Free Workshop? What's the catch?"
+    subtitle="These workshops are free because a percentage of people decide they want help putting the steps into action and they us. If that’s you, great. If not, no pressure at all."
+    items={[
+      {
+        title: 'Review',
+        description:
+          'When you book a free workshop, we’ll take a focused look at what’s working in your business, where leads or clients might be slipping through the cracks, and what can be optimized.',
+      },
+      {
+        title: 'Recommend',
+        description:
+          'I’ll walk you through the exact steps to upgrade your client enrollment process using the RED Method so you walk away with a clear plan you can implement right away.',
+      },
+      {
+        title: 'Guarantee',
+        description:
+          'I guarantee you’ll leave with valuable, actionable strategies to attract more of the right clients. No fluff, no pitch-fest, just real insight into what moves the needle.',
+      },
+    ]}
+  />
+  <Fragment>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  </Fragment>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a Free RED Workshop Today',
+        href: '#',
+        // target: '_blank',
+        onclick:
+          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
+        icon: 'tabler:presentation',
+      },
+    ]}
+  />
 </Layout>
