@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+import { Icon } from 'astro-icon/components';
 import Features from '~/components/widgets/Features.astro';
 // import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -42,7 +42,8 @@ const metadata = {
     <!-- This is not just a chat. It's a step-by-step look at how to grow your business with The RED Method. In just 45 minutes, we’ll show you what to fix, what to change, and how to get more of the right people saying “yes” to your offer. -->
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        In just 45 minutes, we’ll show you what to fix, what to change, and how to get more of the right people saying “yes” to your offer.</span 
+        In just 45 minutes, we’ll show you what to fix, what to change, and how to get more of the right people saying
+        “yes” to your offer.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">With Less Work and No Guessing</span>
     </Fragment>
@@ -50,29 +51,35 @@ const metadata = {
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <section class="bg-blue-50 dark:bg-slate-800 not-prose">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
+      <span class="font-bold">
+        <Icon name="tabler:info-square" class="w-5 h-5 inline-block align-text-bottom" />Here’s why</span
+      > this 45-minute call can change everything
+    </div>
+  </section>
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="The Problem"
-    title="Struggling To Grow?"
+    tagline=""
+    title="Is Getting Clients Hard Right Now?"
     items={[
       {
-        title: 'No clear steps to help clients',
+        title: 'People say they’re interested, but don’t buy',
         icon: 'tabler:x',
       },
       {
-        title: 'Prospects lose interest',
+        title: 'You feel like you’re doing too much by yourself',
         icon: 'tabler:x',
       },
       {
-        title: 'Not enough new customers',
+        title: 'You want more clients, but you’re not sure what to fix',
         icon: 'tabler:x',
       },
       {
-        title: 'Too much manual work',
+        title: 'You’re tired of guessing what works',
         icon: 'tabler:x',
       },
     ]}
@@ -81,34 +88,36 @@ const metadata = {
   <!-- Content Widget **************** -->
   <Content
     isReversed
-    tagline="A Predictable System for Getting Clients"
-    title="The RED Method is a Step-by-Step Blueprint to Grow Your Business"
+    tagline="What You Get From"
+    title="The Free Workshop"
     items={[
       {
-        title: 'Predictable Growth',
-        description: 'Always know where your next customer is coming from. No more guessing!',
+        title: 'Clarity',
+        description: 'We’ll show you what’s working—and what’s not',
       },
       {
-        title: 'Simple Process',
-        description: 'A clear and easy process that works without being too complicated.',
+        title: ' A Real Plan',
+        description: 'You’ll get a simple plan to bring in more clients',
       },
       {
-        title: 'No Hard Selling',
-        description: 'No pushy sales calls—just a smooth way to get new customers.',
+        title: 'Next Steps',
+        description: 'You’ll know the next steps to take right away',
       },
       {
-        title: 'Works for Any Business',
-        description: 'Perfect for coaches, consultants, and service businesses that want to grow',
+        title: 'Zero Pressure',
+        description: 'No pushy sales talk—just real help',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      alt: 'Steps image',
+      src: '~/assets/images/map.png',
+      alt: 'The RED Method Map',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building A Real Foundation</h3>
-      By following a simple plan you get measurable, repeatable results.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        A 45-Minute Call That Delivers Real Answers Not Just Talk
+      </h3>
+      Walk away with a custom plan to attract better clients, faster and without the stress or sales games.
     </Fragment>
 
     <Fragment slot="bg">
@@ -118,33 +127,6 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
   <a id="session"></a>
-  <Steps
-    title="How The RED Method Gives You a Scalable Client System"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Refine & Simplify</span>',
-        description:
-          'We break down your service into its core components, removing complexity and distractions that get in the way of connecting with your audience',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Engage & Automate</span>',
-        description:
-          'We implement systems for world-class first impressions and ongoing authentic communication, ensuring potential clients stay eager for your service',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Develop & Grow</span>',
-        description:
-          'We build your audience and reach, making your client engine more predictable over time—giving you full control over your growth',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/map.png',
-      alt: 'The RED Method Map',
-    }}
-  />
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -222,23 +204,23 @@ const metadata = {
     ]}
   > -->
   <Steps2
-    title="A Free Workshop? What's the catch?"
-    subtitle="These workshops are free because a percentage of people decide they want help putting the steps into action and they hire us. If that’s you, great. If not, no pressure at all."
+    title="Why is this Free?"
+    subtitle="Simple: some people ask us to help implement the RED Method after the workshop. If that’s you- awesome. If not, no pressure. Either way, you’ll walk away with a game plan that could change the way you do business."
     items={[
       {
         title: 'Review',
         description:
-          'When you book a free workshop, we’ll take a focused look at what’s working in your business, where leads or clients might be slipping through the cracks, and what can be optimized.',
+          'When you book a free workshop, we’ll take a focused look at what’s working in your business, where leads or clients might be slipping through the cracks, and what you can fix to grow faster.',
       },
       {
         title: 'Recommend',
         description:
-          'I’ll walk you through the exact steps to upgrade your client enrollment process using the RED Method so you walk away with a clear plan you can implement right away.',
+          'I’ll walk you through the exact steps to improve how you bring in new clients using the RED Method so you walk away with a clear plan you can use right away.',
       },
       {
         title: 'Guarantee',
         description:
-          'I guarantee you’ll leave with valuable, actionable strategies to attract more of the right clients. No fluff, no pitch-fest, just real insight and an invitation to help move the needle.',
+          'You’ll get real tips you can act on- no fluff, no sales pitch. Just helpful ideas to get more of the right clients and an offer to help you get their faster.',
       },
     ]}
   />
@@ -246,6 +228,40 @@ const metadata = {
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   </Fragment>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a Free RED Workshop Today',
+        href: '#',
+        // target: '_blank',
+        onclick:
+          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
+        icon: 'tabler:presentation',
+      },
+    ]}
+  />
+  <Steps
+    title="The RED Method: A Simple Way to Grow"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Refine & Simplify</span>',
+        description: 'We’ll clarify your offer and eliminate the noise so your message hits home instantly',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Engage & Automate</span>',
+        description:
+          'We’ll show you how to create compelling first impressions and ongoing connection—without spending hours chasing leads',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Develop & Grow</span>',
+        description: 'We’ll map out how to build momentum, grow your reach, and give you full control over your growth',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
   <Hero
     actions={[
       {
