@@ -89,7 +89,7 @@ const metadata = {
   <Content
     isReversed
     tagline="What You Get From"
-    title="The Free Workshop"
+    title="Your Free Client Workshop"
     items={[
       {
         title: 'Clarity',
@@ -109,7 +109,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/map.png',
+      src: '~/assets/images/client-engine-map.png',
       alt: 'The RED Method Map',
     }}
   >
@@ -137,6 +137,77 @@ const metadata = {
                         Astro is a very interesting technology. Thanks.
                 `}
   /> -->
+  <Steps2
+    title="Why is this Free?"
+    subtitle="Simple: some people ask us to help implement the RED Method after the workshop. If that’s you- awesome. If not, no pressure. Either way, you’ll walk away with a game plan that could change the way you do business."
+    items={[
+      {
+        title: 'Review',
+        description:
+          'When you book a free workshop, we’ll take a focused look at what’s working in your business, where leads or clients might be slipping through the cracks, and what you can fix to grow faster.',
+      },
+      {
+        title: 'Recommend',
+        description:
+          'I’ll walk you through the exact steps to improve how you bring in new clients using the RED Method so you walk away with a clear plan you can use right away.',
+      },
+      {
+        title: 'Guarantee',
+        description:
+          'You’ll get real tips you can act on- no fluff, no sales pitch. Just helpful ideas to get more of the right clients and an offer to help you get their faster.',
+      },
+    ]}
+  />
+  <Fragment>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  </Fragment>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a Free RED Workshop Today',
+        href: '#',
+        // target: '_blank',
+        onclick:
+          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
+        icon: 'tabler:presentation',
+      },
+    ]}
+  />
+  <Steps
+    title="What is The RED Method?"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Refine & Simplify</span>',
+        description: 'Clarify your offer and eliminate the noise so your message hits home instantly',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Engage & Automate</span>',
+        description: 'Create a compelling first impression and regular connection—without spending hours chasing leads',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Develop & Grow</span>',
+        description: 'Build momentum, grow your reach, with full control over your time',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a Free RED Workshop Today',
+        href: '#',
+        // target: '_blank',
+        onclick:
+          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
+        icon: 'tabler:presentation',
+      },
+    ]}
+  />
 
   <!-- FAQs Widget ******************* -->
   <!-- 
@@ -203,76 +274,4 @@ const metadata = {
       },
     ]}
   > -->
-  <Steps2
-    title="Why is this Free?"
-    subtitle="Simple: some people ask us to help implement the RED Method after the workshop. If that’s you- awesome. If not, no pressure. Either way, you’ll walk away with a game plan that could change the way you do business."
-    items={[
-      {
-        title: 'Review',
-        description:
-          'When you book a free workshop, we’ll take a focused look at what’s working in your business, where leads or clients might be slipping through the cracks, and what you can fix to grow faster.',
-      },
-      {
-        title: 'Recommend',
-        description:
-          'I’ll walk you through the exact steps to improve how you bring in new clients using the RED Method so you walk away with a clear plan you can use right away.',
-      },
-      {
-        title: 'Guarantee',
-        description:
-          'You’ll get real tips you can act on- no fluff, no sales pitch. Just helpful ideas to get more of the right clients and an offer to help you get their faster.',
-      },
-    ]}
-  />
-  <Fragment>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  </Fragment>
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Schedule a Free RED Workshop Today',
-        href: '#',
-        // target: '_blank',
-        onclick:
-          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
-        icon: 'tabler:presentation',
-      },
-    ]}
-  />
-  <Steps
-    title="The RED Method: A Simple Way to Grow"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Refine & Simplify</span>',
-        description: 'We’ll clarify your offer and eliminate the noise so your message hits home instantly',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Engage & Automate</span>',
-        description:
-          'We’ll show you how to create compelling first impressions and ongoing connection—without spending hours chasing leads',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Develop & Grow</span>',
-        description: 'We’ll map out how to build momentum, grow your reach, and give you full control over your growth',
-        icon: 'tabler:check',
-      },
-    ]}
-  />
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Schedule a Free RED Workshop Today',
-        href: '#',
-        // target: '_blank',
-        onclick:
-          "Calendly.initPopupWidget({url: 'https://calendly.com/clients-jjg/client-engine-workshop?hide_gdpr_banner=1'});return false;",
-        icon: 'tabler:presentation',
-      },
-    ]}
-  />
 </Layout>
